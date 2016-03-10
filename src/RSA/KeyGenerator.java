@@ -3,6 +3,11 @@ package RSA;
 import java.math.BigInteger;
 import java.util.Random;
 
+/**
+ * Created by Tobias on 10.03.2016.
+ * 2nd Developer Janis Angst
+ */
+
 public class KeyGenerator {
     private RSAKey publicKey;
     private RSAKey privateKey;
