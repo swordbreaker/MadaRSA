@@ -1,5 +1,7 @@
 package RSA;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.io.*;
 import java.util.stream.Stream;
 
@@ -28,9 +30,7 @@ public class Main {
         // Writes the public key into the pk.txt file
         FileManager.writeKeyToFile(keyGenerator.getPublicKey(), "pk.txt");
 
-        byte[] bytes = AsciiConverter.ConvertToByte("Hallo Mueter, hallo Vater");
-        Stream.of(bytes).forEach(bytes1 -> System.out.print(bytes1));
-        System.out.println("\n");
-        System.out.println(AsciiConverter.convertToString(bytes));
+        String message = FileManager.readFile("message.txt");
+        byte[] messageBytes = AsciiConverter.ConvertToByte(message);
     }
 }
