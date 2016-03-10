@@ -5,12 +5,18 @@ import java.util.Random;
 
 /**
  * Created by Tobias on 10.03.2016.
+ * 2nd Developer Janis Angst
  */
 public class Prime {
     public BigInteger prime1;
     public BigInteger prime2;
     public BigInteger n;
 
+    /**
+     * Prime Constructor
+     *
+     * Creates two prime numbers and multiplies it
+     */
     public Prime() {
         Random random = new Random();
 

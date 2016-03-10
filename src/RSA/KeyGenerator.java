@@ -14,6 +14,13 @@ public class KeyGenerator {
 
     public static int bigIntSize = 32; //1024
 
+    /**
+     * KeyGenerator Constructor
+     *
+     * Creates a random number.
+     * With the two prime numbers and "e", the Constructor will calculate "d"
+     * The 3 numbers are saved as private key(n,d) and public key(n,e)
+     */
     public KeyGenerator() {
         Random random = new Random();
         Prime prime = new Prime();
@@ -24,17 +31,40 @@ public class KeyGenerator {
         System.out.printf("Prim2: %d \n", prime.prime2);
         System.out.printf("Phi N: %d \n", phiN);
 
-        BigInteger d = extendedEuclidean(phiN, e);
+        // Check if the prerequisite for the extended euclidean is correct else create a new random number
+        BigInteger d = BigInteger.ZERO;
+        do {
+            if(phiN.compareTo(e) == 0 || phiN.compareTo(e) == 1) {
+                d = extendedEuclidean(phiN, e);
+            }
+            else
+            {
+                e = new BigInteger(bigIntSize, random);
+            }
+        }while (d.equals(BigInteger.ZERO));
+
 
         privateKey = new RSAKey(prime.n, d);
         publicKey = new RSAKey(prime.n, e);
     }
 
+
+    /**
+     * With the Euler's phi function we get phi(n)
+     *
+     * @param p prime number 1
+     * @param q prime number 2
+     * @return BigInteger Euler's phi of p * q
+     */
     public static BigInteger phi(BigInteger p, BigInteger q) {
-        //(p - 1)*(q - 1)
         return (p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE)));
     }
 
+    /**
+     * @param a phiN
+     * @param b random number "e"
+     * @return returns the value of "d"
+     */
     public static BigInteger extendedEuclidean(BigInteger a, BigInteger b) {
         BigInteger x0 = BigInteger.ONE;
         BigInteger y0 = BigInteger.ZERO;
@@ -65,10 +95,18 @@ public class KeyGenerator {
         return y0;
     }
 
+    /**
+     * Returns the value of the private key
+     * @return privateKey
+     */
     public RSAKey getPrivateKey() {
         return privateKey;
     }
 
+    /**
+     * Returns the value of the public key
+     * @return publicKey
+     */
     public RSAKey getPublicKey() {
         return publicKey;
     }
