@@ -34,15 +34,12 @@ public class KeyGenerator {
         // Check if the prerequisite for the extended euclidean is correct else create a new random number
         BigInteger d = BigInteger.ZERO;
         do {
+            e = new BigInteger(bigIntSize, random);
+
             if(phiN.compareTo(e) == 0 || phiN.compareTo(e) == 1) {
                 d = extendedEuclidean(phiN, e);
             }
-            else
-            {
-                e = new BigInteger(bigIntSize, random);
-            }
-        }while (d.equals(BigInteger.ZERO));
-
+        }while (d.compareTo(BigInteger.ZERO) <= 0);
 
         privateKey = new RSAKey(prime.n, d);
         publicKey = new RSAKey(prime.n, e);

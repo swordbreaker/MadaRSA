@@ -3,6 +3,7 @@ package RSA;
 import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.io.*;
+import java.math.BigInteger;
 import java.util.stream.Stream;
 
 /**
@@ -32,5 +33,15 @@ public class Main {
 
         String message = FileManager.readFile("message.txt");
         byte[] messageBytes = AsciiConverter.ConvertToByte(message);
+        BigInteger messageInt = new BigInteger(messageBytes);
+
+        BigInteger encryptedMessage = keyGenerator.getPublicKey().encrypt(messageInt);
+
+        BigInteger decodedMessage = keyGenerator.getPrivateKey().decrypt(encryptedMessage);
+
+        System.out.printf("msg1: %d\n", messageInt);
+        System.out.printf("msg2: %d\n", decodedMessage);
+
+        System.out.println(AsciiConverter.convertToString(decodedMessage.toByteArray()));
     }
 }

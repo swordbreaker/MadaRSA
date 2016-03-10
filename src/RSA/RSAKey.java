@@ -14,4 +14,24 @@ public class RSAKey {
         this.n = n;
         this.ed = ed;
     }
+
+    /**
+     * x^e mod n
+     * @param value to encrypt
+     * @return encrypted BigInterger
+     */
+    public BigInteger encrypt(BigInteger value)
+    {
+        return value.modPow(ed, n);
+    }
+
+    /**
+     * y^d mod n
+     * @param value to decrypt
+     * @return decripted BigInterger
+     */
+    public BigInteger decrypt(BigInteger value)
+    {
+        return value.modPow(ed, n);
+    }
 }
