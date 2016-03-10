@@ -1,6 +1,7 @@
 package RSA;
 
 import java.io.*;
+import java.util.stream.Stream;
 
 /**
  * Created by Tobias on 10.03.2016.
@@ -19,33 +20,17 @@ public class Main {
         KeyGenerator keyGenerator = new KeyGenerator();
         System.out.printf("n: %d \n", keyGenerator.getPrivateKey().n);
         System.out.printf("d: %d \n", keyGenerator.getPrivateKey().ed);
-
         System.out.printf("e: %d \n", keyGenerator.getPublicKey().ed);
 
         // Writes the private key into the sk.txt file
-        try(  PrintWriter out = new PrintWriter( "sk.txt" )  ){
-            out.print("(");
-            out.print(keyGenerator.getPrivateKey().n);
-            out.print(",");
-            out.print(keyGenerator.getPrivateKey().ed);
-            out.print(")");
-        }
-        catch (IOException e)
-        {
-            System.out.println("Hallo ERROR");
-        }
+        FileManager.writeKeyToFile(keyGenerator.getPrivateKey(), "sk.txt");
 
         // Writes the public key into the pk.txt file
-        try(  PrintWriter out = new PrintWriter( "pk.txt" )  ){
-            out.print("(");
-            out.print(keyGenerator.getPublicKey().n);
-            out.print(",");
-            out.print(keyGenerator.getPublicKey().ed);
-            out.print(")");
-        }
-        catch (IOException e)
-        {
-            System.out.println("Hallo ERROR");
-        }
+        FileManager.writeKeyToFile(keyGenerator.getPublicKey(), "pk.txt");
+
+        byte[] bytes = AsciiConverter.ConvertToByte("Hallo Mueter, hallo Vater");
+        Stream.of(bytes).forEach(bytes1 -> System.out.print(bytes1));
+        System.out.println("\n");
+        System.out.println(AsciiConverter.convertToString(bytes));
     }
 }
