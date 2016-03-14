@@ -36,7 +36,7 @@ public class KeyGenerator {
         do {
             e = new BigInteger(bigIntSize, random);
 
-            if(phiN.compareTo(e) == 0 || phiN.compareTo(e) == 1) {
+            if(phiN.compareTo(e) <= 0) {
                 d = extendedEuclidean(phiN, e);
             }
         }while (d.compareTo(BigInteger.ZERO) <= 0);
@@ -84,7 +84,8 @@ public class KeyGenerator {
             x1 = oldX0.subtract(q.multiply(x1));
             //oldY0-q*y1;
             y1 = oldY0.subtract(q.multiply(y1));
-            if(b.compareTo(BigInteger.ZERO) == 0) continue;
+            //Break when b is Zero to permit divided by Zero
+            if(b.compareTo(BigInteger.ZERO) == 0) break;
             q = a.divide(b);
             r = a.mod(b);
         }

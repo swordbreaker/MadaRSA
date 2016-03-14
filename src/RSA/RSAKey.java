@@ -8,6 +8,7 @@ import java.math.BigInteger;
 public class RSAKey {
     public BigInteger n;
     public BigInteger ed;
+    public BigInteger d;
 
     public RSAKey(BigInteger n, BigInteger ed)
     {
