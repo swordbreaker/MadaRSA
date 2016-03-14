@@ -21,8 +21,8 @@ public class Prime {
         Random random = new Random();
 
         do {
-            prime1 = new BigInteger(KeyGenerator.bigIntSize, random);
-            prime2 = new BigInteger(KeyGenerator.bigIntSize, random);
+            prime1 = new BigInteger(KeyGenerator.bigIntSize, 1, random);
+            prime2 = new BigInteger(KeyGenerator.bigIntSize, 1, random);
         } while (prime1.compareTo(prime2) == 0);
 
         n = prime1.multiply(prime2);

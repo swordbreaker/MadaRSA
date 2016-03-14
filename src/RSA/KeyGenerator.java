@@ -12,19 +12,19 @@ public class KeyGenerator {
     private RSAKey publicKey;
     private RSAKey privateKey;
 
-    public static int bigIntSize = 32; //1024
+    public static int bigIntSize = 16; //1024
 
     /**
      * KeyGenerator Constructor
      *
      * Creates a random number.
-     * With the two prime numbers and "e", the Constructor will calculate "d"
+     * With the two prime numbers and "e", the Constructor will calculate Bla
      * The 3 numbers are saved as private key(n,d) and public key(n,e)
      */
     public KeyGenerator() {
         Random random = new Random();
         Prime prime = new Prime();
-        BigInteger e = new BigInteger(bigIntSize, random);
+        BigInteger e;
         BigInteger phiN = phi(prime.prime1, prime.prime2);
 
         System.out.printf("Prim1: %d \n", prime.prime1);
@@ -34,9 +34,9 @@ public class KeyGenerator {
         // Check if the prerequisite for the extended euclidean is correct else create a new random number
         BigInteger d = BigInteger.ZERO;
         do {
-            e = new BigInteger(bigIntSize, random);
+            e = new BigInteger(bigIntSize,1, random);
 
-            if(phiN.compareTo(e) <= 0) {
+            if(phiN.compareTo(e) >= 0) {
                 d = extendedEuclidean(phiN, e);
             }
         }while (d.compareTo(BigInteger.ZERO) <= 0);

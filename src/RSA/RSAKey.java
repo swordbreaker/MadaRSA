@@ -8,7 +8,6 @@ import java.math.BigInteger;
 public class RSAKey {
     public BigInteger n;
     public BigInteger ed;
-    public BigInteger d;
 
     public RSAKey(BigInteger n, BigInteger ed)
     {
@@ -23,7 +22,16 @@ public class RSAKey {
      */
     public BigInteger encrypt(BigInteger value)
     {
-        return value.modPow(ed, n);
+        return fastPow(value);
+    }
+
+    public BigInteger[] encrypt(byte[] bytes) {
+        BigInteger[] biResults = new BigInteger[bytes.length];
+        for (int i = 0; i < bytes.length; i++) {
+            byte b = bytes[i];
+            biResults[i] = encrypt(BigInteger.valueOf(b));
+        }
+        return biResults;
     }
 
     /**
@@ -33,6 +41,30 @@ public class RSAKey {
      */
     public BigInteger decrypt(BigInteger value)
     {
-        return value.modPow(ed, n);
+        return fastPow(value);
+        //return value.modPow(ed, n);
+    }
+
+    public byte[] decrypt(BigInteger[] bytes) {
+        byte[] byteResults = new byte[bytes.length];
+        for (int i = 0; i < bytes.length; i++) {
+            BigInteger bi = bytes[i];
+            byteResults[i] = decrypt(bi).byteValue();
+        }
+        return byteResults;
+    }
+
+    public BigInteger fastPow(BigInteger k){
+        int i = 0;
+        BigInteger h = BigInteger.ONE;
+
+        while (i < ed.bitLength()){
+            if(ed.testBit(i)){
+                h = h.multiply(k).mod(n);
+            }
+            k = k.pow(2).mod(n);
+            i++;
+        }
+        return h;
     }
 }

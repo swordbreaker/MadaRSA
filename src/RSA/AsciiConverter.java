@@ -7,23 +7,21 @@ import java.io.UnsupportedEncodingException;
  */
 public class AsciiConverter {
 
-    public static byte[] ConvertToByte(String s)
-    {
-        try{
+    public static byte[] ConvertToByte(String s) {
+        try {
             return s.getBytes("US-ASCII");
+        } catch (UnsupportedEncodingException e) {
         }
-        catch (UnsupportedEncodingException e){}
 
         return null;
     }
 
-    public static String convertToString(byte[] bytes)
-    {
-        StringBuilder sb = new StringBuilder();
-        for(byte b : bytes){
-            sb.append((char)b);
+    public static String convertToString(byte[] bytes) {
+        try {
+            return new String(bytes, "US-ASCII");
+        } catch (UnsupportedEncodingException e) {
         }
 
-        return sb.toString();
+        return null;
     }
 }

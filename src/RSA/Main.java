@@ -1,5 +1,6 @@
 package RSA;
 
+import com.sun.nio.sctp.AssociationChangeNotification;
 import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.io.*;
@@ -9,39 +10,45 @@ import java.util.stream.Stream;
 /**
  * Created by Tobias on 10.03.2016.
  * 2nd Developer Janis Angst
- *
+ * <p>
  * This Program creates a RSA-keys
  */
 public class Main {
     /**
      * Main method for the RSA-Key
+     *
      * @param args
      */
     public static void main(String[] args) {
+        //generateKey();
+        //encrypt();
+        decrypt();
+    }
 
+    private static void generateKey() {
         // Generates the two keys.
         KeyGenerator keyGenerator = new KeyGenerator();
-        System.out.printf("n: %d \n", keyGenerator.getPrivateKey().n);
-        System.out.printf("d: %d \n", keyGenerator.getPrivateKey().ed);
-        System.out.printf("e: %d \n", keyGenerator.getPublicKey().ed);
 
         // Writes the private key into the sk.txt file
         FileManager.writeKeyToFile(keyGenerator.getPrivateKey(), "sk.txt");
 
         // Writes the public key into the pk.txt file
         FileManager.writeKeyToFile(keyGenerator.getPublicKey(), "pk.txt");
+    }
 
-        String message = FileManager.readFile("message.txt");
+    private static void encrypt() {
+        RSAKey key = FileManager.readKeyFromFile("pk.txt");
+        String message = FileManager.readFile("text.txt");
         byte[] messageBytes = AsciiConverter.ConvertToByte(message);
-        BigInteger messageInt = new BigInteger(messageBytes);
+        BigInteger[] encrypted = key.encrypt(messageBytes);
 
-        BigInteger encryptedMessage = keyGenerator.getPublicKey().encrypt(messageInt);
+        FileManager.writeToFile("chiffre.txt", encrypted);
+    }
 
-        BigInteger decodedMessage = keyGenerator.getPrivateKey().decrypt(encryptedMessage);
-
-        System.out.printf("msg1: %d\n", messageInt);
-        System.out.printf("msg2: %d\n", decodedMessage);
-
-        System.out.println(AsciiConverter.convertToString(decodedMessage.toByteArray()));
+    private static void decrypt() {
+        RSAKey key = FileManager.readKeyFromFile("sk.txt");
+        BigInteger[] bis = FileManager.readBigIntArrayFromFile("chiffre.txt");
+        byte[] bytes = key.decrypt(bis);
+        System.out.println(AsciiConverter.convertToString(bytes));
     }
 }
