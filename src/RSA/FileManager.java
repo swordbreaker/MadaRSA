@@ -18,7 +18,7 @@ public class FileManager {
             out.print(key.ed);
             out.print(")");
         } catch (IOException e) {
-            System.out.println("Hallo ERROR");
+            e.printStackTrace();
         }
     }
 
@@ -87,7 +87,7 @@ public class FileManager {
         for (int i = 0; i < bis.length; i++) {
             BigInteger bi = bis[i];
             sb.append(bi);
-            if(i < bis.length - 1) sb.append(",");
+            if (i < bis.length - 1) sb.append(",");
         }
         writeToFile(file, sb.toString());
     }

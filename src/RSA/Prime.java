@@ -14,7 +14,7 @@ public class Prime {
 
     /**
      * Prime Constructor
-     *
+     * <p>
      * Creates two prime numbers and multiplies it
      */
     public Prime() {
@@ -27,5 +27,4 @@ public class Prime {
 
         n = prime1.multiply(prime2);
     }
-
 }

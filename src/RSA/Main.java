@@ -25,6 +25,9 @@ public class Main {
         decrypt();
     }
 
+    /**
+     *
+     */
     private static void generateKey() {
         // Generates the two keys.
         KeyGenerator keyGenerator = new KeyGenerator();
@@ -36,6 +39,9 @@ public class Main {
         FileManager.writeKeyToFile(keyGenerator.getPublicKey(), "pk.txt");
     }
 
+    /**
+     *
+     */
     private static void encrypt() {
         RSAKey key = FileManager.readKeyFromFile("pk.txt");
         String message = FileManager.readFile("text.txt");
@@ -45,6 +51,9 @@ public class Main {
         FileManager.writeToFile("chiffre.txt", encrypted);
     }
 
+    /**
+     *
+     */
     private static void decrypt() {
         RSAKey key = FileManager.readKeyFromFile("sk.txt");
         BigInteger[] bis = FileManager.readBigIntArrayFromFile("chiffre.txt");

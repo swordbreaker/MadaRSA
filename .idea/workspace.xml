@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b063517d-7c59-4ad9-9dac-1cc3e9062f35" name="Default" comment="Add a File Manager and a AssciiConverte">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/RSA/AsciiConverterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/RSA/RSAKeyTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/message.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mada/RSA/AsciiConverter.class" afterPath="$PROJECT_DIR$/out/production/Mada/RSA/AsciiConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mada/RSA/FileManager.class" afterPath="$PROJECT_DIR$/out/production/Mada/RSA/FileManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mada/RSA/KeyGenerator.class" afterPath="$PROJECT_DIR$/out/production/Mada/RSA/KeyGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mada/RSA/Main.class" afterPath="$PROJECT_DIR$/out/production/Mada/RSA/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mada/RSA/RSAKey.class" afterPath="$PROJECT_DIR$/out/production/Mada/RSA/RSAKey.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pk.txt" afterPath="$PROJECT_DIR$/pk.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sk.txt" afterPath="$PROJECT_DIR$/sk.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSA/AsciiConverter.java" afterPath="$PROJECT_DIR$/src/RSA/AsciiConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSA/FileManager.java" afterPath="$PROJECT_DIR$/src/RSA/FileManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSA/KeyGenerator.java" afterPath="$PROJECT_DIR$/src/RSA/KeyGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSA/Main.java" afterPath="$PROJECT_DIR$/src/RSA/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSA/Prime.java" afterPath="$PROJECT_DIR$/src/RSA/Prime.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSA/RSAKey.java" afterPath="$PROJECT_DIR$/src/RSA/RSAKey.java" />
@@ -46,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RSA/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0025510204">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/RSA/FileManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+              <caret line="114" column="26" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/RSA/KeyGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+              <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/RSA/AsciiConverter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -112,14 +100,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RSAKey.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RSAKey.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RSA/RSAKey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.5229592">
+              <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
               <folding>
-                <element signature="e#417#418#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/src/RSA/Prime.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,13 +180,13 @@
         <option value="$PROJECT_DIR$/src/RSA/RSAEncoder.java" />
         <option value="$PROJECT_DIR$/src/RSA/RSADecoder.java" />
         <option value="$PROJECT_DIR$/test/RSA/AsciiConverterTest.java" />
-        <option value="$PROJECT_DIR$/src/RSA/Prime.java" />
         <option value="$PROJECT_DIR$/test/RSA/RSAKeyTest.java" />
         <option value="$PROJECT_DIR$/src/RSA/KeyGenerator.java" />
+        <option value="$PROJECT_DIR$/src/RSA/FileManager.java" />
+        <option value="$PROJECT_DIR$/src/RSA/Prime.java" />
+        <option value="$PROJECT_DIR$/src/RSA/Main.java" />
         <option value="$PROJECT_DIR$/src/RSA/AsciiConverter.java" />
         <option value="$PROJECT_DIR$/src/RSA/RSAKey.java" />
-        <option value="$PROJECT_DIR$/src/RSA/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/RSA/Main.java" />
       </list>
     </option>
   </component>
@@ -914,7 +902,7 @@
       <workItem from="1457615438387" duration="5673000" />
       <workItem from="1457625440313" duration="10002000" />
       <workItem from="1457638206246" duration="6626000" />
-      <workItem from="1457936621037" duration="18003000" />
+      <workItem from="1457936621037" duration="18554000" />
     </task>
     <task id="LOCAL-00001" summary="Delted Serie 1">
       <created>1457633213703</created>
@@ -958,11 +946,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51200000" />
+    <option name="totallyTimeSpent" value="51751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -974,7 +962,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32038835" sideWeight="0.44729137" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24816984" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24816984" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1009,14 +997,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/RSA/RSAKey.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
@@ -1079,8 +1059,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1138,8 +1118,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
           <folding>
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1196,8 +1176,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1270,18 +1250,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSA/AsciiConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/RSA/Prime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSA/KeyGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1291,17 +1263,35 @@
     <entry file="file://$PROJECT_DIR$/src/RSA/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <caret line="114" column="26" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSA/Prime.java">
+    <entry file="file://$PROJECT_DIR$/src/RSA/AsciiConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RSA/KeyGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RSA/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1310,21 +1300,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RSA/RSAKey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.5229592">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
           <folding>
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RSA/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0025510204">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
           </folding>
         </state>
       </provider>
