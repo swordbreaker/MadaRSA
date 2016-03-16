@@ -93,8 +93,9 @@ public class FileManager {
             e.printStackTrace();
         }
 
-        return sb.toString();
-    }
+        // Deleting BOM from UTF-8 files
+        return sb.toString().replace("\uFEFF", "");
+}
 
     /**
      * Writes the string into a file
