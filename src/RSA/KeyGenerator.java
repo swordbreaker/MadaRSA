@@ -12,7 +12,7 @@ public class KeyGenerator {
     private RSAKey publicKey;
     private RSAKey privateKey;
 
-    public static int bigIntSize = 16; //1024
+    public static int bigIntSize = 1024;
 
     /**
      * KeyGenerator Constructor
@@ -26,10 +26,6 @@ public class KeyGenerator {
         Prime prime = new Prime();
         BigInteger e;
         BigInteger phiN = phi(prime.prime1, prime.prime2);
-
-        System.out.printf("Prim1: %d \n", prime.prime1);
-        System.out.printf("Prim2: %d \n", prime.prime2);
-        System.out.printf("Phi N: %d \n", phiN);
 
         // Check if the prerequisite for the extended euclidean is correct else create a new random number
         BigInteger d = BigInteger.ZERO;
