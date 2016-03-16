@@ -16,14 +16,7 @@ public class AsciiConverter {
      * @return Converted string in Bytes
      */
     public static byte[] ConvertToByte(String s) {
-        //try {
-            //return s.getBytes("US-ASCII");
-           // return s.getBytes("UTF-16");
             return s.getBytes(StandardCharsets.ISO_8859_1);
-      //  } catch (UnsupportedEncodingException e) {
-      //  }
-
-      //  return null;
     }
 
     /**
@@ -33,13 +26,6 @@ public class AsciiConverter {
      * @return Converted Bytes in string
      */
     public static String convertToString(byte[] bytes) {
-      //  try {
-            //return new String(bytes, "US-ASCII");
-            //return new String(bytes, "UTF-16");
             return new String(bytes, StandardCharsets.ISO_8859_1);
-      //  } catch (UnsupportedEncodingException e) {
-      //  }
-
-      //  return null;
     }
 }

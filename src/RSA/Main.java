@@ -45,6 +45,7 @@ public class Main {
     private static void encrypt() {
         RSAKey key = FileManager.readKeyFromFile("pk.txt");
         String message = FileManager.readFile("text.txt");
+        // Deleting BOM from UTF-8 files
         message = message.replace("\uFEFF", "");
         byte[] messageBytes = AsciiConverter.ConvertToByte(message);
         BigInteger[] encrypted = key.encrypt(messageBytes);
