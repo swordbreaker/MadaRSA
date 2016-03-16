@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.Random;
 
 /**
- * Created by Tobias on 10.03.2016.
+ * Created by Tobias Bollinger on 10.03.2016.
  * 2nd Developer Janis Angst
  */
 public class Prime {
@@ -14,7 +14,7 @@ public class Prime {
 
     /**
      * Prime Constructor
-     * <p>
+     *
      * Creates two prime numbers and multiplies it
      */
     public Prime() {

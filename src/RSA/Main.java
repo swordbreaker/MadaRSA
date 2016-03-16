@@ -8,9 +8,9 @@ import java.math.BigInteger;
 import java.util.stream.Stream;
 
 /**
- * Created by Tobias on 10.03.2016.
+ * Created by Tobias Bollinger on 10.03.2016.
  * 2nd Developer Janis Angst
- * <p>
+ *
  * This Program creates a RSA-keys
  */
 public class Main {
@@ -20,13 +20,13 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        //generateKey();
-        //encrypt();
+        generateKey();
+        encrypt();
         decrypt();
     }
 
     /**
-     *
+     * Generates two keys and safes each key in the specific textfile
      */
     private static void generateKey() {
         // Generates the two keys.
@@ -40,11 +40,12 @@ public class Main {
     }
 
     /**
-     *
+     * Encrypts the content from the file with the public key and safes it into an other file.
      */
     private static void encrypt() {
         RSAKey key = FileManager.readKeyFromFile("pk.txt");
         String message = FileManager.readFile("text.txt");
+        message = message.replace("\uFEFF", "");
         byte[] messageBytes = AsciiConverter.ConvertToByte(message);
         BigInteger[] encrypted = key.encrypt(messageBytes);
 
@@ -52,7 +53,7 @@ public class Main {
     }
 
     /**
-     *
+     * Decrypts the content from the encrypted file with the private key.
      */
     private static void decrypt() {
         RSAKey key = FileManager.readKeyFromFile("sk.txt");

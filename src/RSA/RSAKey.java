@@ -3,12 +3,19 @@ package RSA;
 import java.math.BigInteger;
 
 /**
- * Created by Tobias on 10.03.2016.
+ * Created by Tobias Bollinger on 10.03.2016.
+ * 2nd Developer Janis Angst
  */
 public class RSAKey {
     public BigInteger n;
     public BigInteger ed;
 
+    /**
+     * Constructor for the RSAKey
+     *
+     * @param n Primenumber
+     * @param ed public/private key number
+     */
     public RSAKey(BigInteger n, BigInteger ed) {
         this.n = n;
         this.ed = ed;
@@ -25,8 +32,10 @@ public class RSAKey {
     }
 
     /**
-     * @param bytes
-     * @return
+     * Encription of every byte
+     *
+     * @param bytes text in bytesarray
+     * @return encripted text
      */
     public BigInteger[] encrypt(byte[] bytes) {
         BigInteger[] biResults = new BigInteger[bytes.length];
@@ -49,8 +58,10 @@ public class RSAKey {
     }
 
     /**
-     * @param bytes
-     * @return
+     * Decription of every byte
+     *
+     * @param bytes encripted text in BigIntegerarray
+     * @return returns the text in bytes
      */
     public byte[] decrypt(BigInteger[] bytes) {
         byte[] byteResults = new byte[bytes.length];
@@ -62,8 +73,10 @@ public class RSAKey {
     }
 
     /**
-     * @param k
-     * @return
+     * The fast exponentiation operation
+     *
+     * @param k exponent
+     * @return result of square and multiply
      */
     public BigInteger fastPow(BigInteger k) {
         int i = 0;

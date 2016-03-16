@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.Random;
 
 /**
- * Created by Tobias on 10.03.2016.
+ * Created by Tobias Bollinger on 10.03.2016.
  * 2nd Developer Janis Angst
  */
 
@@ -18,7 +18,7 @@ public class KeyGenerator {
      * KeyGenerator Constructor
      *
      * Creates a random number.
-     * With the two prime numbers and "e", the Constructor will calculate Bla
+     * With the two prime numbers and "e", the Constructor will calculate
      * The 3 numbers are saved as private key(n,d) and public key(n,e)
      */
     public KeyGenerator() {
@@ -58,6 +58,8 @@ public class KeyGenerator {
     }
 
     /**
+     *
+     *
      * @param a phiN
      * @param b random number "e"
      * @return returns the value of "d"
