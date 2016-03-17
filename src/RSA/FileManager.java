@@ -3,7 +3,6 @@ package RSA;
 import java.io.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 /**
  * Created by Tobias Bollinger on 10.03.2016.
